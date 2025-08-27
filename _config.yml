@@ -25,8 +25,9 @@ author:
   avatar           : "profile.png"
   name             : "Xiping Sun"
   pronouns         : # example: "she/her"  
-  bio              : "MSE Robotics Student @ Grasp Lab, UPenn,
-                     BS CS Student @ UIUC"
+  bio: |-
+    M.S.E. Robotics Student @ GRASP Lab, UPenn  
+    B.S. CS Student @ UIUC
   location         : "Philadelphia, PA"
   # employer         : "Red Brick University"
   uri              : # URL
