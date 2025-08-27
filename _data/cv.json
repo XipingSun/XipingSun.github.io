@@ -47,7 +47,17 @@
       "gpa": 3.87
     }
   ],
-  "languages": ["Chinese (Native)", "English (Fluent)"],
+  "skills": [
+    {
+      "name": "Programming Languages",
+      "keywords": ["Python", "C/C++", "Java", "SQL"]
+    },
+    {
+      "name": "Software Packages",
+      "keywords": ["ROS", "TensorFlow", "PyTorch"]
+    }
+  ],
+  "languages": [{"name": "Chinese (Native)"}, {"name": "English (Fluent)"}],
   "publications": [
     {
       "name": "Social Gesture Recognition in spHRI: Leveraging Fabric-Based Tactile Sensing on Humanoid Robots",
