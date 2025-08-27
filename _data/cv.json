@@ -1,69 +1,46 @@
 {
   "basics": {
-    "name": "Your Sidebar Name",
-    "email": "none@example.org",
-    "phone": "",
-    "website": "https://academicpages.github.io",
-    "summary": "Currently employed at Red Brick University. Short biography for the left-hand sidebar",
-    "location": {
-      "address": "",
-      "postalCode": "",
-      "city": "Earth",
-      "countryCode": "US",
-      "region": ""
-    },
+    "name": "Xiping Sun",
+    "email": "sxp22@seas.upenn.edu",
+    "phone": "6268619358",
+    "website": "https://XipingSun.github.io",
     "profiles": [
       {
         "network": "Google Scholar",
         "username": "",
-        "url": "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+        "url": "https://scholar.google.com/citations?user=xuIoyJEAAAAJ&hl=en"
       },
       {
-        "network": "ORCID",
-        "username": "",
-        "url": "http://orcid.org/yourorcidurl"
+        "network": "LinkedIn",
+        "username": "xipingsun",
+        "url": "https://www.linkedin.com/in/xipingsun/"
       },
       {
         "network": "GitHub",
-        "username": "academicpages",
-        "url": "https://github.com/academicpages"
+        "username": "XipingSun",
+        "url": "https://github.com/XipingSun"
       }
     ]
   },
   "work": [],
   "education": [
     {
-      "institution": "GitHub University",
-      "area": "Ph.D in Version Control Theory",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2018",
-      "gpa": null,
-      "courses": []
+      "institution": "University of Pennsylvania",
+      "area": "M.S.E. in Robotics, Grasp Lab",
+      "startDate": "August, 2025",
+      "endDate": "May, 2027 (expected)",
+      "gpa": 4.00
     },
     {
-      "institution": "GitHub University",
-      "area": "M.S. in Jekyll",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2014",
-      "gpa": null,
-      "courses": []
-    },
-    {
-      "institution": "GitHub University",
-      "area": "B.S. in GitHub",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2012",
-      "gpa": null,
-      "courses": []
+      "institution": "University of Illinois at Urbana Champaign",
+      "area": "B.S. in Computer Science",
+      "startDate": "August, 2021",
+      "endDate": "May, 2025",
+      "gpa": 3.87
     }
   ],
-  "skills": [],
-  "languages": [],
-  "interests": [],
-  "references": [],
+  "skills": ["Python", "C++", "Java", "SQL", "ROS", "TensorFlow", "PyTorch"],
+  "languages": ["Chinese (Native)", "English (Fluent)"],
   "publications": [
     {
       "name": "Social Gesture Recognition in spHRI: Leveraging Fabric-Based Tactile Sensing on Humanoid Robots",
