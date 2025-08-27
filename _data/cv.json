@@ -22,7 +22,15 @@
       }
     ]
   },
-  "work": [],
+  "work": [
+    {
+      "company": "LifeFoundry, Inc.",
+      "position": "software engineering intern",
+      "startDate": "May, 2023",
+      "endDate": "August, 2023",
+      "summary": "Research on fabric-based tactile sensing for social human-robot interaction (spHRI)."
+    }
+  ],
   "education": [
     {
       "institution": "University of Pennsylvania",
