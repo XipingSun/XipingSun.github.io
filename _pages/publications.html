@@ -1,36 +1,33 @@
 ---
 layout: archive
-title: "Publications"
 permalink: /publications/
 author_profile: true
+
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
+<div style="text-align: center; margin-bottom: 30px;">
+  <h1 style="color: #2c3e50; font-size: 2.5em;">Publications</h1>
+</div>
 
-{% include base_path %}
+<div style="background-color: #f8f9fa; padding: 20px; border-radius: 10px; margin-bottom: 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+  <div style="display: flex; align-items: flex-start;">
+    <img align="left" style="width:200px; height:140px; margin-right:30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" src="/images/active_t.png">
+    <div>
+      <h3 style="color: #2c3e50; margin-top: 0;">Social Gesture Recognition in spHRI: Leveraging Fabric-Based Tactile Sensing on Humanoid Robots</h3>
+      <p style="color: #34495e; margin-bottom: 10px;">
+         <a href="https://scholar.google.com/citations?user=SwJ6ua8AAAAJ&hl=en" style="color: #3498db; text-decoration: none;">Dakarai Crowder</a>, <a href="https://scholar.google.com/citations?user=G-FjvoEAAAAJ&hl=en" style="color: #3498db; text-decoration: none;">Kojo VanDyck</a>, <strong>Xiping Sun</strong>, <a href="https://www.cs.cmu.edu/~jmccann/" style="color: #3498db; text-decoration: none;">James McCann</a> and <a href="https://siebelschool.illinois.edu/about/people/all-faculty/yuanwz" style="color: #3498db; text-decoration: none;">Wenzhen Yuan</a>
+      </p>
+      <p style="color: #7f8c8d;">
+        IEEE International Conference on Robotics and Automation (<strong>ICRA</strong>), 2025<br>
+        <a href="https://arxiv.org/pdf/2502.02663" style="color: #3498db; text-decoration: none;">[Paper]</a> | 
+        <a href="https://leumasnij.github.io/double_guessing/" style="color: #3498db; text-decoration: none;">[Website]</a> | 
+        <a href="https://youtu.be/ZNsIUE29w_c" style="color: #3498db; text-decoration: none;">[Video]</a>
+      </p>
+    </div>
+  </div>
+</div>
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+
 
 
 
