@@ -18,6 +18,7 @@ I graduated from University of Illinois at Urbana Champaign (UIUC) with a B.S. i
 - 🟢 **Touch sensing**
 - 🟠 **Wearable devices**
 - 🟡 **Human–robot interaction**
+- ⚪️ **Contact-rich Manipulation**
  
 
 
@@ -26,8 +27,11 @@ I graduated from University of Illinois at Urbana Champaign (UIUC) with a B.S. i
 ## Past Research
 
 During my undergrad time at UIUC, I worked on the following projects:
-- 🔵 **Large-scale tactile sensing for social physical human–robot interaction.**
-- 🟣 **Fingertip touch sensing.**  
+- 🟢 **NailBender: explore nail flexion on haptic input and output**
+- 🟡 **Strain2Force: nailed based sensor for 3dof contact force estimation**
+- 🟣 **A modularzied design approach for Gelsight family of vision-based tactile sensor[🔗](https://arxiv.org/abs/2504.14739)** 
+- 🔵 **Large-scale tactile sensing for social physical human–robot interaction[🔗](https://dakaraisc.github.io/sphri_gesture_rec/)**
+ 
 
 > See more details on my **[CV](/cv-json/)** and **[Publications](/publications/)** pages.
 
