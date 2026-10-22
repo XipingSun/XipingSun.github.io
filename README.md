@@ -1,96 +1,43 @@
-# Academic Pages
-**Academic Pages is a GitHub Pages template for personal and professional portfolio-oriented websites.**
+# Xiping Sun — personal website
 
-![Academic Pages template example](images/homepage.png "Academic Pages template example")
+这是一个无需构建、没有第三方依赖的纯静态网站。上传时请使用**本文件夹里的内容**，不要把文件夹本身再嵌套一层。根目录必须能看到 `index.html`。
 
-# Getting Started
+## 上传到 GitHub
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Click the "Use this template" button in the top right.
-1. On the "New repository" page, enter your public repository name as "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and add your content.
-1. Upload any files (like PDFs, .zip files, etc.) to the `files/` directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
+1. 打开 `XipingSun/XipingSun.github.io` 仓库，在上传前备份旧网站。
+2. 用本文件夹的内容替换旧网站文件；不要与旧模板混合。保留隐藏文件 `.nojekyll`，让 GitHub Pages 直接发布 HTML。
+3. 在仓库 **Settings → Pages → Build and deployment** 中选择 **Deploy from a branch**，选择你上传的分支及 **/ (root)**，然后保存。
+4. 发布完成后访问 https://XipingSun.github.io/ 。如果原仓库用了 Jekyll 专用的 Actions 部署工作流，请改用上述 branch 发布方式。
 
-See more info at https://academicpages.github.io/
+## 文件结构
 
-## Running locally
-
-When you are initially working on your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
-
-1. Clone the repository and made updates as detailed above.
-
-### Using a different IDE
-1. Make sure you have ruby-dev, bundler, and nodejs installed
-    
-    On most Linux distribution and [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/about) the command is:
-    ```bash
-    sudo apt install ruby-dev ruby-bundler nodejs
-    ```
-    If you see error `Unable to locate package ruby-bundler`, `Unable to locate package nodejs `, run the following:
-    ```bash
-    sudo apt update && sudo apt upgrade -y
-    ```
-    then try run `sudo apt install ruby-dev ruby-bundler nodejs` again.
-
-    On MacOS the commands are:
-    ```bash
-    brew install ruby
-    brew install node
-    gem install bundler
-    ```
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
-
-    If you see file permission error like `Fetching bundler-2.6.3.gem ERROR:  While executing gem (Gem::FilePermissionError) You don't have write permissions for the /var/lib/gems/3.2.0 directory.` or `Bundler::PermissionError: There was an error while trying to write to /usr/local/bin.`
-    Install Gems Locally (Recommended):
-    ```bash
-    bundle config set --local path 'vendor/bundle'
-    ```
-    then try run `bundle install` again. If succeeded, you should see a folder called `vendor` and `.bundle`.
-
-1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change.
-    You may also try `bundle exec jekyll serve -l -H localhost` to ensure jekyll to use specific dependencies on your own local machine.
-
-If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essential gcc make`
-
-## Using Docker
-
-Working from a different OS, or just want to avoid installing dependencies? You can use the provided `Dockerfile` to build a container that will run the site for you if you have [Docker](https://www.docker.com/) installed.
-
-You can build and execute the container by running the following command in the repository:
-
-```bash
-chmod -R 777 .
-docker compose up
+```text
+index.html                 首页：介绍、Research interests、News、研究卡片
+publications/index.html    Publications
+assets/docs/CV.pdf         你的原始 PDF 简历
+cv-json/index.html         旧 CV 地址跳转到 PDF
+fun/index.html             Riley 的照片与介绍
+assets/css/style.css       所有样式及手机适配
+images/                    网站实际用到的 7 个图片/图标文件
+.nojekyll                  GitHub Pages 直接发布静态文件
 ```
 
-You should now be able to access the website from `localhost:4000`.
+## 修改内容
 
-### Using the DevContainer in VS Code
+- 更新 News：编辑 `index.html` 中的 `academic-news` 区块；每条消息是一个 `news-item`。
+- 更新研究项目：编辑首页和 Publications 页的 `research-card` 区块。复制一张卡片即可增加项目，图片放在 `images/` 中。
+- 更换头像：替换 `images/xiping.png`。
+- 更换 CV：替换 `assets/docs/CV.pdf`。首页的 CV 按钮会直接打开该 PDF，旧 `/cv-json/` 地址也会自动跳转。
+- 修改颜色与间距：编辑 `assets/css/style.css`。
 
-If you are using [Visual Studio Code](https://code.visualstudio.com/) you can use the [Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) that comes with this Repository. Normally VS Code detects that a development coontainer configuration is available and asks you if you want to use the container. If this doesn't happen you can manually start the container by **F1->DevContainer: Reopen in Container**. This restarts your VS Code in the container and automatically hosts your academic page locally on http://localhost:4000. All changes will be updated live to that page after a few seconds.
+可直接双击 `index.html` 预览，也可以在此文件夹运行 `python3 -m http.server 8000`，然后访问 http://localhost:8000 。
 
-# Maintenance
+研究信息沿用原网站，并参照 https://chen-yanjun.com/ 补全 NailBender 与 Strain2Force 的作者、会议及获奖信息；这两个项目的缩略图也来自该共同作者站点。未加入旧模板中的示例论文、示例 CV、默认博客或其他未使用的图片。
 
-Bug reports and feature requests to the template should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
+## 侧栏图标来源
 
-This repository was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License (see LICENSE.md). It is currently being maintained by [Robert Zupko](https://github.com/rjzupkoii) and additional maintainers would be welcomed.
+复用了旧站的图标轮廓，内嵌 SVG，无需下载字体或外部服务：Font Awesome Free 6.5.2（Fonticons，https://fontawesome.com/license/free ，CC BY 4.0 / SIL OFL 1.1）与 Academicons 1.9.4（James Walsh、Katja Bercic，https://jpswalsh.github.io/academicons/ ，SIL OFL 1.1）。
 
-## Bugfixes and enhancements
+导航栏提供 Home / Publications / Fun；CV 位于首页头像侧栏的联系方式下方，作为独立 PDF 按钮。News 默认显示最近三条消息，点击 Earlier updates 可展开较早的两条消息；悬停或键盘聚焦时会突出对应条目。
 
-If you have bugfixes and enhancements that you would like to submit as a pull request, you will need to [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repository as opposed to using it as a template. This will also allow you to [synchronize your copy](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) of template to your fork as well.
-
-Unfortunately, one logistical issue with a template theme like Academic Pages that makes it a little tricky to get bug fixes and updates to the core theme. If you use this template and customize it, you will probably get merge conflicts if you attempt to synchronize. If you want to save your various .yml configuration files and markdown files, you can delete the repository and fork it again. Or you can manually patch.
-
----
-<div align="center">
-    
-![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
-[![GitHub contributors](https://img.shields.io/github/contributors/academicpages/academicpages.github.io.svg)](https://github.com/academicpages/academicpages.github.io/graphs/contributors)
-[![GitHub release](https://img.shields.io/github/v/release/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/releases/latest)
-[![GitHub license](https://img.shields.io/github/license/academicpages/academicpages.github.io?color=blue)](https://github.com/academicpages/academicpages.github.io/blob/master/LICENSE)
-
-[![GitHub stars](https://img.shields.io/github/stars/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io)
-[![GitHub forks](https://img.shields.io/github/forks/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/fork)
-</div>
+视觉配色使用深青绿主色、浅鼠尾草绿 News 面板，以及四种柔和底色的研究兴趣标签。News 中的 Read more 链接已移除，较早的 ICRA 项目网站链接保留。
